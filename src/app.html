@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="%sveltekit.theme%">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Advanced note-taking app with rich text editing and drawing capabilities" />
+    <title>Advanced Notes App</title>
+
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- PWA Icons and Manifest -->
+    <link rel="manifest" href="%sveltekit.assets%/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%sveltekit.assets%/favicon-16x16.png">
+    <link rel="mask-icon" href="%sveltekit.assets%/safari-pinned-tab.svg" color="#3b82f6">
+
+    <!-- Meta tags -->
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Notes">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Advanced Notes App">
+    <meta property="og:description" content="A modern note-taking application with rich text editing and drawing capabilities">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="%sveltekit.assets%/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Advanced Notes App">
+    <meta name="twitter:description" content="A modern note-taking application with rich text editing and drawing capabilities">
+    <meta name="twitter:image" content="%sveltekit.assets%/og-image.png">
+
+    %sveltekit.head%
+</head>
+<body
+        data-sveltekit-preload-data="hover"
+        class="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200"
+        style="font-family: 'Inter', system-ui, -apple-system, sans-serif;"
+>
+<div style="display: contents">%sveltekit.body%</div>
+
+<!-- Service worker registration with error handling -->
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(function(error) {
+            console.log('Service worker registration failed:', error);
+        });
+    }
+</script>
+</body>
+</html>
