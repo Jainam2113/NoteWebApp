@@ -79,6 +79,9 @@ A modern, feature-rich note-taking application built with Svelte and TailwindCSS
    ```
    http://localhost:3000
    ```
+5. **Start Services with Docker Compose
+
+       docker-compose up -d
 
 ### Build for Production
 
@@ -260,20 +263,6 @@ npm run test:coverage # Generate coverage report
 4. **Add Shortcuts**: Register keyboard shortcuts in shortcuts system
 5. **Update Tests**: Add unit tests for new functionality
 
-## 🧪 Testing
-
-The app includes a comprehensive testing setup:
-
-```bash
-# Run all tests
-npm run test
-
-# Run with watch mode
-npm run test:watch
-
-# Generate coverage report
-npm run test:coverage
-```
 
 ### Test Structure
 
@@ -297,17 +286,7 @@ src/
 
 The app builds to static files and can be deployed to any static hosting service:
 
-#### Vercel
-```bash
-npm i -g vercel
-vercel
-```
 
-#### Netlify
-```bash
-npm run build
-# Deploy the 'build' directory
-```
 
 #### GitHub Pages
 ```bash
@@ -365,8 +344,6 @@ npm install
 # Start development server
 npm run dev
 
-# Run tests
-npm run test
 
 # Check code quality
 npm run lint
@@ -408,12 +385,7 @@ If you encounter any issues or have questions:
 - [ ] **Voice Notes**: Audio recording and transcription
 - [ ] **Mobile Apps**: Native iOS and Android applications
 
-### Version History
 
-- **v1.0.0**: Initial release with core features
-- **v1.1.0**: Enhanced drawing capabilities (planned)
-- **v1.2.0**: Collaboration features (planned)
-- **v2.0.0**: Cloud sync and mobile apps (planned)
 
 ---
 
